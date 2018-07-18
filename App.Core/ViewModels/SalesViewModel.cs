@@ -16,16 +16,18 @@ namespace App.Core.ViewModels
         private readonly IRequestService<Sale> _service;
         private readonly ObservableCollection<SaleViewModel> _sales = new ObservableCollection<SaleViewModel>();
         public ReadOnlyObservableCollection<SaleViewModel> Sales { get; private set; }
+        private string _url;
 
         public SalesViewModel(INavigationService navigationService, IDialogService dialogService)
         {
             _service = new RequestService<Sale>();
             Sales = new ReadOnlyObservableCollection<SaleViewModel>(_sales);
+            _url = "https://pastebin.com/raw/R9cJFBtG";
         }
 
-        public async Task LoadCountersAsync()
+        public async Task LoadSalesAsync()
         {
-            foreach (var sale in await _service.GetAll("https://pastebin.com/raw/R9cJFBtG"))
+            foreach (var sale in await _service.GetAll(_url))
             {
                 _sales.Add(new SaleViewModel(sale));
             }

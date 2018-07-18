@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/countersRecyclerView"
+        android:layout_above="@+id/footer"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="0dp"
+        android:clipToPadding="false"
+        android:background="@color/divider" />
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#696969"
+        android:gravity="center">
+        <Button
+            android:id="@+id/closeCart"
+            android:background="#F0E68C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+</RelativeLayout>

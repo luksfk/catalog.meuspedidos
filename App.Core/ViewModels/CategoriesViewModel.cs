@@ -19,15 +19,18 @@ namespace App.Core.ViewModels
         private readonly ObservableCollection<CategoryViewModel> _categories = new ObservableCollection<CategoryViewModel>();
         public ReadOnlyObservableCollection<CategoryViewModel> Categories { get; private set; }
 
+        private string _url;
+
         public CategoriesViewModel()
         {            
             _service = new RequestService<Category>();
             Categories = new ReadOnlyObservableCollection<CategoryViewModel>(_categories);
+            _url = "http://pastebin.com/raw/YNR2rsWe";
         }
 
-        public async Task LoadCountersAsync()
+        public async Task LoadCategoriesAsync()
         {
-            foreach (var category in await _service.GetAll("http://pastebin.com/raw/YNR2rsWe"))
+            foreach (var category in await _service.GetAll(_url))
             {
                 _categories.Add(new CategoryViewModel(category));
             }

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:background="#E2E2E2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="7dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:id="@+id/photo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+            <TextView
+                android:text="asd asd as dasd asd asd asd as dasd as das das dsa asdasd ad as das dasd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:id="@+id/name"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:textSize="13sp" />
+            <TextView
+                android:text="Message"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:id="@+id/discount"
+                android:paddingRight="5dp"
+                android:drawableLeft="@drawable/ic_arrow_down"
+                android:layout_weight="0.5"
+                android:background="#DC143C"
+                android:textColor="#FFFFFF"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:singleLine="true" />
+            <TextView
+                android:text="Price"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/price"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:padding="4dp"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+                <Button
+                    android:id="@+id/addFavorite"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@android:color/transparent" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:id="@+id/favoriteImage"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_star"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <TextView
+                android:text="UN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/quantity"
+                android:gravity="center_horizontal" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout1">
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:textAlignment="center" />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="#000"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

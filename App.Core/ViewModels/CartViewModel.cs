@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using App.Core.Models;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
@@ -51,7 +52,12 @@ namespace App.Core.ViewModels
 
         private void CloseCart()
         {
-            _navigationService.NavigateTo(ViewModelLocator.NewCounterPageKey);
+            _navigationService.NavigateTo(ViewModelLocator.CloseCartKey);
+        }
+
+        public ProductViewModel ProductInChart(Product product)
+        {
+            return Products.Where(t => t.Id == product.Id).FirstOrDefault();
         }
     }
 }

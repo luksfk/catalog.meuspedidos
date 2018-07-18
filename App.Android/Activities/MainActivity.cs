@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-
+using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -15,6 +15,7 @@ using Android.Views;
 using Android.Widget;
 using App.Core.DataBase;
 using App.Core.ViewModels;
+using App.Fragments.Products;
 using JimBobBennett.MvvmLight.AppCompat;
 
 namespace App.Activities
@@ -25,7 +26,7 @@ namespace App.Activities
         public MainActivity()
         {
             var navigationService = new AppCompatNavigationService();
-            //navigationService.Configure(ViewModelLocator.NewCounterPageKey, typeof(NewCounterActivity));
+            //navigationService.Configure(ViewModelLocator., typeof(NewCounterActivity));
             //navigationService.Configure(ViewModelLocator.EditCounterPageKey, typeof(EditCounterActivity));
             ViewModelLocator.RegisterNavigationService(navigationService);
             ViewModelLocator.RegisterDialogService(new AppCompatDialogService());
@@ -69,8 +70,7 @@ namespace App.Activities
                 _drawerLayout.CloseDrawers();
             };
 
-
-            //if first time you will want to go ahead and click first item.
+            
             if (savedInstanceState == null)
             {
                 ListItemClicked(0);
@@ -78,13 +78,13 @@ namespace App.Activities
                 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 var dbPath = Path.Combine(path, "counters.db3");
 
-                DatabaseHelper.CreateDatabase(dbPath);                
+                DatabaseHelper.CreateDatabase(dbPath);
 
-                await ViewModelLocator.Sales.LoadCountersAsync();
-                await ViewModelLocator.Products.LoadCountersAsync();
-                await ViewModelLocator.Categories.LoadCountersAsync();
+                await ViewModelLocator.Sales.LoadSalesAsync();
+                await ViewModelLocator.Products.LoadProductsAsync();
+                await ViewModelLocator.Categories.LoadCategoriesAsync();
 
-                InvalidateOptionsMenu();                
+                InvalidateOptionsMenu();
             }
         }
 
@@ -107,24 +107,14 @@ namespace App.Activities
             return base.OnCreateOptionsMenu(menu);
         }
 
-        //int _oldPosition = -1;
         private void ListItemClicked(int position)
         {
-            //this way we don't load twice, but you might want to modify this a bit.
-            //if (position == _oldPosition)
-            //    return;
-
-            //_oldPosition = position;
-
             Android.Support.V4.App.Fragment fragment = null;
             switch (position)
             {
                 case 0:
-                    //fragment = CountersFragment.NewInstance();
-                    break;
-                case 1:
-                    //fragment = AboutFragment.NewInstance();
-                    break;
+                    fragment = ProductsFragment.NewInstance();
+                    break;                
             }
 
             SupportFragmentManager.BeginTransaction()

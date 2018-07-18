@@ -1,4 +1,5 @@
-﻿using Android.OS;
+﻿using Android;
+using Android.OS;
 using Android.Support.V7.Widget;
 using JimBobBennett.MvvmLight.AppCompat;
 

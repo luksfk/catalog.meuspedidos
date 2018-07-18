@@ -1,7 +1,7 @@
-﻿using App.Core.Database;
-using App.Core.ViewModels;
+﻿using System.Threading.Tasks;
 using SQLite;
-using System.Threading.Tasks;
+using App.Core.ViewModels;
+using App.Core.Database;
 
 namespace App.Core.DataBase
 {

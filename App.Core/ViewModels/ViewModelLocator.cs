@@ -1,7 +1,7 @@
 using App.Core.DataBase;
-using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
+using Microsoft.Practices.ServiceLocation;
 
 namespace App.Core.ViewModels
 {
@@ -34,8 +34,7 @@ namespace App.Core.ViewModels
             }            
         }
 
-        public const string NewCounterPageKey = "NewCounterPage";
-        public const string EditCounterPageKey = "EditCounterPage";
+        public const string CloseCartKey = "CloseCartPage";        
 
         public static SalesViewModel Sales => ServiceLocator.Current.GetInstance<SalesViewModel>();        
         public static ProductsViewModel Products => ServiceLocator.Current.GetInstance<ProductsViewModel>();
