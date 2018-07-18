@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using Android;
 using Android.App;
 using Android.Content;
@@ -26,8 +28,7 @@ namespace App.Activities
         public MainActivity()
         {
             var navigationService = new AppCompatNavigationService();
-            //navigationService.Configure(ViewModelLocator., typeof(NewCounterActivity));
-            //navigationService.Configure(ViewModelLocator.EditCounterPageKey, typeof(EditCounterActivity));
+            navigationService.Configure(ViewModelLocator.CloseCartKey, typeof(CloseCartActivity));
             ViewModelLocator.RegisterNavigationService(navigationService);
             ViewModelLocator.RegisterDialogService(new AppCompatDialogService());
         }
@@ -70,23 +71,39 @@ namespace App.Activities
                 _drawerLayout.CloseDrawers();
             };
 
-            
+
             if (savedInstanceState == null)
             {
                 ListItemClicked(0);
 
-                var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                var dbPath = Path.Combine(path, "counters.db3");
-
-                DatabaseHelper.CreateDatabase(dbPath);
-
-                await ViewModelLocator.Sales.LoadSalesAsync();
-                await ViewModelLocator.Products.LoadProductsAsync();
-                await ViewModelLocator.Categories.LoadCategoriesAsync();
-
-                InvalidateOptionsMenu();
+                await InitialLoad();
             }
         }
+
+        private async Task InitialLoad()
+        {
+            ProgressDialog progress = new ProgressDialog(this);
+            progress.Indeterminate = true;
+            progress.SetProgressStyle(Android.App.ProgressDialogStyle.Spinner);
+            progress.SetMessage("Carregando...");
+            progress.SetCancelable(false);
+            progress.Show();
+            
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var dbPath = Path.Combine(path, "counters.db3");
+            DatabaseHelper.CreateDatabase(dbPath);
+            
+            await ViewModelLocator.Sales.LoadSalesAsync();
+            
+            await ViewModelLocator.Products.LoadProductsAsync();
+            
+            await ViewModelLocator.Categories.LoadCategoriesAsync();            
+
+            InvalidateOptionsMenu();
+
+            progress.Dismiss();
+        }
+
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -114,7 +131,7 @@ namespace App.Activities
             {
                 case 0:
                     fragment = ProductsFragment.NewInstance();
-                    break;                
+                    break;
             }
 
             SupportFragmentManager.BeginTransaction()

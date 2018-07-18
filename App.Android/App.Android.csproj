@@ -49,7 +49,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Activities\CloseCartActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Fragments\Cart\CartAdapter.cs" />
+    <Compile Include="Fragments\Cart\CartItemViewHolder.cs" />
     <Compile Include="Fragments\Products\HeaderViewHolder.cs" />
     <Compile Include="Fragments\Products\ProductsFragment.cs" />
     <Compile Include="Fragments\Products\ProductsAdapter.cs" />
@@ -344,6 +347,12 @@
       <Project>{2B31FC8B-D091-4DE1-95EE-51EA1CFB0144}</Project>
       <Name>App.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\cart_item_view.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\SQLitePCL.raw.0.8.6\build\MonoAndroid\SQLitePCL.raw.targets" Condition="Exists('..\packages\SQLitePCL.raw.0.8.6\build\MonoAndroid\SQLitePCL.raw.targets')" />

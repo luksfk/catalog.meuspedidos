@@ -59,5 +59,8 @@ namespace App.Core.ViewModels
         {
             return Products.Where(t => t.Id == product.Id).FirstOrDefault();
         }
+
+        private RelayCommand _goBackCommand;
+        public RelayCommand GoBackCommand => _goBackCommand ?? (_goBackCommand = new RelayCommand(() => _navigationService.GoBack()));
     }
 }

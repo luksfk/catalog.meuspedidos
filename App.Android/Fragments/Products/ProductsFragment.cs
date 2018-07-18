@@ -17,7 +17,7 @@ namespace App.Fragments.Products
             return new ProductsFragment { Arguments = new Bundle() };
         }
 
-        private RecyclerView _recyclerView;        
+        private RecyclerView _recyclerView;
         private LinearLayout _footer;
         private Button _closeCart;
 
@@ -29,7 +29,7 @@ namespace App.Fragments.Products
             _recyclerView = view.FindViewById<RecyclerView>(Resource.Id.countersRecyclerView);
             _recyclerView.SetLayoutManager(new LinearLayoutManager(Context, LinearLayoutManager.Vertical, false));
             _recyclerView.SetAdapter(new ProductsAdapter());
-            
+
 
             _footer = view.FindViewById<LinearLayout>(Resource.Id.footer);
             _closeCart = view.FindViewById<Button>(Resource.Id.closeCart);
