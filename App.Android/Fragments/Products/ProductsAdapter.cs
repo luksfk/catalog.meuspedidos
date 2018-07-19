@@ -51,7 +51,7 @@ namespace App.Fragments.Products
             }
             else
             {
-                var itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.counter_view, parent, false);
+                var itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.product_view, parent, false);
                 return new ProductViewHolder(itemView);
             }
         }

@@ -132,31 +132,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_circle_black_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_white_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_delete_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_done_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_home_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_home_2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ic_star.png" />
@@ -168,31 +150,13 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_circle_black_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_white_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_delete_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_done_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_home_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_home_2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_star.png" />
@@ -204,22 +168,10 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_circle_black_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_white_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_down.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_delete_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_done_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_star.png" />
@@ -231,13 +183,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\about_fragment.axml" />
+    <AndroidResource Include="Resources\layout\product_view.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\counter_view.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\counters_fragment.axml" />
+    <AndroidResource Include="Resources\layout\products_fragment.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\header_view.axml" />
@@ -246,31 +195,19 @@
     <AndroidResource Include="Resources\layout\nav_header.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\new_counter.axml" />
+    <AndroidResource Include="Resources\layout\close_cart.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\toolbar.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\menu\edit_counter_menu.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\menu\nav_menu.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\menu\new_counter_menu.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\arrays.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\dimens.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\integers.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -285,31 +222,13 @@
     <AndroidResource Include="Resources\values-v21\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_add_circle_black_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_add_white_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_delete_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_done_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_home_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_home_2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_settings_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_star.png" />
@@ -321,31 +240,13 @@
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_add_circle_black_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_add_white_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_delete_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_done_white_48dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_home_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_home_2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\ic_star.png" />

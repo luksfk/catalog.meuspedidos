@@ -44,7 +44,7 @@ namespace App.Activities
             _closeCart.SetCommand(nameof(Button.Click), ViewModelLocator.Cart.CloseCartCommand);
         }
 
-        protected override int LayoutResource => Resource.Layout.new_counter;
+        protected override int LayoutResource => Resource.Layout.close_cart;
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
