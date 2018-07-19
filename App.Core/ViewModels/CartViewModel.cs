@@ -24,6 +24,8 @@ namespace App.Core.ViewModels
 
         public decimal CartPrice => Products.Sum(t => t.TotalPrice);
 
+        public int CartQuantity => Products.Sum(t => t.Quantity);
+
         private RelayCommand<ProductViewModel> _addProductToChart;
         public RelayCommand<ProductViewModel> AddProductToChart => _addProductToChart ?? (_addProductToChart = new RelayCommand<ProductViewModel>(AddProduct));
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -12,47 +13,77 @@
             layout="@layout/toolbar"
             app:layout_scrollFlags="scroll|enterAlways" />
     </android.support.design.widget.AppBarLayout>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/closeCartRecyclerView"
-        android:layout_below="@+id/toolbar_layout"
-        android:scrollbars="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:clipToPadding="false"
-        android:background="@color/divider" />
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/closeCartRecyclerView"
         android:orientation="vertical"
-        android:paddingLeft="10dp">
-        <TextView
-            android:text="Product Name"
+        android:weightSum="10">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:id="@+id/item_cart_name"
-            android:textColor="#000"
-            android:gravity="center_vertical"
-            android:textSize="13sp" />
+            android:layout_weight="8.5"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/closeCartRecyclerView"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:background="@color/divider" />
+            <TextView
+                android:text="Total Quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:id="@+id/cart_total_quantity"
+                android:textColor="#000"
+                android:textSize="13sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:id="@+id/item_cart_total_label"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+                <TextView
+                    android:text="Total Cart"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:id="@+id/cart_total_price"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/closeCartFooter"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#696969"
+            android:gravity="center">
+            <Button
+                android:id="@+id/closeCartButton"
+                android:background="#F0E68C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FINALIZAR A COMPRA"
+                android:textColor="#000"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"
+                android:textAlignment="center" />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/closeCartFooter"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        android:background="#696969"
-        android:gravity="center">
-        <Button
-            android:id="@+id/closeCartButton"
-            android:background="#F0E68C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#000"
-            android:paddingRight="50dp"
-            android:paddingLeft="50dp"
-            android:textAlignment="center" />
-    </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
