@@ -1,15 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-  <group android:checkableBehavior="single">
+  <group>    
     <item
-        android:id="@+id/nav_counters"
-        android:icon="@drawable/ic_add_circle_black_48dp"
-        android:title="Counters" />
-    <item
-        android:id="@+id/nav_about"
+        android:id="@+id/nav_test"
         android:icon="@drawable/ic_settings_black_48dp"
-        android:title="About" />
+        android:title="Teste" />
   </group>
-
 </menu>

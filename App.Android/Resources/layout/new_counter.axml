@@ -31,52 +31,61 @@
                 android:layout_weight="1"
                 android:clipToPadding="false"
                 android:background="@color/divider" />
-            <TextView
-                android:text="Total Quantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:id="@+id/cart_total_quantity"
-                android:textColor="#000"
-                android:textSize="13sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@color/divider">
                 <TextView
-                    android:text="Total"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:id="@+id/item_cart_total_label"
-                    android:textColor="#000"
-                    android:textSize="13sp" />
-                <TextView
-                    android:text="Total Cart"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:text="Total Quantity"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:id="@+id/cart_total_price"
-                    android:textColor="#000"
+                    android:id="@+id/cart_total_quantity"
+                    android:textColor="@color/colorGray"
                     android:textSize="13sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/darker_gray" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:text="Total"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:id="@+id/item_cart_total_label"
+                        android:textColor="@color/colorGray"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:text="Total Cart"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/cart_total_price"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/closeCartFooter"
+            android:id="@+id/cart_close_cart_footer"
             android:layout_weight="1.5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="#696969"
+            android:background="@color/primary"
             android:gravity="center">
             <Button
-                android:id="@+id/closeCartButton"
-                android:background="#F0E68C"
+                android:id="@+id/cart_close_cart_button"
+                android:background="@color/defaultYellow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="FINALIZAR A COMPRA"

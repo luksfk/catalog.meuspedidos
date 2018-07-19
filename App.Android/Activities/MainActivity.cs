@@ -56,15 +56,10 @@ namespace App.Activities
             //handle navigation
             _navigationView.NavigationItemSelected += (sender, e) =>
             {
-                e.MenuItem.SetChecked(true);
-
                 switch (e.MenuItem.ItemId)
                 {
-                    case Resource.Id.nav_counters:
-                        ListItemClicked(0);
-                        break;
-                    case Resource.Id.nav_about:
-                        ListItemClicked(1);
+                    case Resource.Id.nav_test:
+                        ViewModelLocator.DialogService.ShowMessage("Opção de teste selecionada", "Teste");
                         break;
                 }
 
@@ -88,16 +83,16 @@ namespace App.Activities
             progress.SetMessage("Carregando...");
             progress.SetCancelable(false);
             progress.Show();
-            
+
             var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             var dbPath = Path.Combine(path, "counters.db3");
             DatabaseHelper.CreateDatabase(dbPath);
-            
+
             await ViewModelLocator.Sales.LoadSalesAsync();
-            
+
             await ViewModelLocator.Products.LoadProductsAsync();
-            
-            await ViewModelLocator.Categories.LoadCategoriesAsync();            
+
+            await ViewModelLocator.Categories.LoadCategoriesAsync();
 
             InvalidateOptionsMenu();
 

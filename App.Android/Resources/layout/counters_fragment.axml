@@ -17,11 +17,11 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_alignParentBottom="true"
-        android:background="#696969"
+        android:background="@color/primary"
         android:gravity="center">
         <Button
             android:id="@+id/closeCart"
-            android:background="#F0E68C"
+            android:background="@color/defaultYellow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""

@@ -13,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using App.Core.ViewModels;
 using App.Fragments.Products;
+using GalaSoft.MvvmLight.Helpers;
 
 namespace App.Activities
 {
@@ -22,6 +23,7 @@ namespace App.Activities
         private RecyclerView _recyclerView;
         private TextView _totalQuantity;
         private TextView _totalPrice;
+        private Button _closeCart;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,10 +35,13 @@ namespace App.Activities
 
             _totalQuantity = FindViewById<TextView>(Resource.Id.cart_total_quantity);
             _totalPrice = FindViewById<TextView>(Resource.Id.cart_total_price);
-            
+
             _totalQuantity.Text = string.Format("{0} UN", ViewModelLocator.Cart.CartQuantity.ToString());
             _totalPrice.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ViewModelLocator.Cart.CartPrice);
 
+            _closeCart = FindViewById<Button>(Resource.Id.cart_close_cart_button);
+
+            _closeCart.SetCommand(nameof(Button.Click), ViewModelLocator.Cart.CloseCartCommand);
         }
 
         protected override int LayoutResource => Resource.Layout.new_counter;

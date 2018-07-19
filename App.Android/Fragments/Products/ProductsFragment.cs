@@ -34,7 +34,7 @@ namespace App.Fragments.Products
             _footer = view.FindViewById<LinearLayout>(Resource.Id.footer);
             _closeCart = view.FindViewById<Button>(Resource.Id.closeCart);
 
-            _closeCart.SetCommand(nameof(Button.Click), ViewModelLocator.Cart.CloseCartCommand);
+            _closeCart.SetCommand(nameof(Button.Click), ViewModelLocator.Cart.GoToCloseCartCommand);
 
 
             ((INotifyCollectionChanged)ViewModelLocator.Cart.Products).CollectionChanged += OnCollectionChanged;

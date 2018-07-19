@@ -37,10 +37,10 @@ namespace App.Fragments.Products
             _discount = itemView.FindViewById<TextView>(Resource.Id.discount);
             _favorite = itemView.FindViewById<ImageView>(Resource.Id.favoriteImage);
 
-            var increment = itemView.FindViewById<Button>(Resource.Id.plus);
+            var increment = itemView.FindViewById<ImageButton>(Resource.Id.plus);
             increment.Click += IncrementOnClick;
 
-            var decrement = itemView.FindViewById<Button>(Resource.Id.minus);
+            var decrement = itemView.FindViewById<ImageButton>(Resource.Id.minus);
             decrement.Click += DecrementOnClick;
 
             var favorite = itemView.FindViewById<Button>(Resource.Id.addFavorite);
@@ -75,7 +75,7 @@ namespace App.Fragments.Products
 
             _name.Text = productViewModel.Name;
             if (image != null) _photo.SetImageBitmap(image);
-            _quantity.Text = string.Format("{0} UN", productViewModel.Quantity);
+            _quantity.Text = productViewModel.Quantity.ToString();
             _price.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", productViewModel.Price);
             ShowDiscount();
         }
@@ -83,7 +83,7 @@ namespace App.Fragments.Products
         private void CounterViewModelOnPropertyChanged(object sender, PropertyChangedEventArgs args)
         {
             if (args.PropertyName == nameof(ProductViewModel.Quantity))
-                _quantity.Text = string.Format("{0} UN", _productViewModel.Quantity);
+                _quantity.Text = _productViewModel.Quantity.ToString();
 
             if (args.PropertyName == nameof(ProductViewModel.Favorite))
                 SetFavoriteImage();

@@ -49,13 +49,22 @@ namespace App.Core.ViewModels
             }
         }
 
+        private RelayCommand _goToCloseCartCommand;
+        public RelayCommand GoToCloseCartCommand => _goToCloseCartCommand ?? (_goToCloseCartCommand = new RelayCommand(GoToCloseCart));
+
+        private void GoToCloseCart()
+        {
+            _navigationService.NavigateTo(ViewModelLocator.CloseCartKey);
+        }
+
         private RelayCommand _closeCartCommand;
         public RelayCommand CloseCartCommand => _closeCartCommand ?? (_closeCartCommand = new RelayCommand(CloseCart));
 
         private void CloseCart()
         {
-            _navigationService.NavigateTo(ViewModelLocator.CloseCartKey);
+            _dialogService.ShowMessage("Compra realizada com sucesso", "Sucesso");
         }
+
 
         public ProductViewModel ProductInChart(Product product)
         {
