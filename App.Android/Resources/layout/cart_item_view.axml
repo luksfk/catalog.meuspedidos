@@ -5,6 +5,7 @@
     android:id="@+id/card_view"
     android:background="#E2E2E2"
     android:layout_width="match_parent"
+    card_view:contentPadding="10dp"
     android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
